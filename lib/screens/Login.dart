@@ -52,7 +52,7 @@ class _LoginPage extends State<LoginPage> {
   Widget playGame() {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xFF800020),
+        backgroundColor: const Color.fromARGB(255, 15, 14, 15),
         body: ListView(
           children: [
             Container(
@@ -90,19 +90,32 @@ class _LoginPage extends State<LoginPage> {
                               ),
                               Padding(
                                 padding:
-                                    const EdgeInsets.symmetric(horizontal: 30),
+                                    const EdgeInsets.symmetric(horizontal: 25),
                                 child: Column(
                                   children: [
                                     TextFormField(
-                                      decoration: InputDecoration(
+                                       decoration: const InputDecoration(
+                                          enabledBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          focusedBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          filled: true,
+                                          fillColor: Color.fromARGB(
+                                              255, 250, 250, 250),
                                           focusColor: Color(0xFF800020),
                                           hintText: 'Email',
                                           hintStyle: TextStyle(
-                                            color: Color(0xFF800020),
+                                            color: Color.fromARGB(
+                                                255, 173, 167, 169),
                                           )),
-                                      onChanged: (value) {
-                                        loginModel.email = value;
-                                      },
                                       validator: (value) {
                                         if (value == null || value.isEmpty) {
                                           return 'Please enter  email';
@@ -114,14 +127,30 @@ class _LoginPage extends State<LoginPage> {
                                       height: 10,
                                     ),
                                     TextFormField(
-                                      obscureText: true,
-                                      decoration: InputDecoration(
+                                     obscureText: true,
+                                      decoration: const InputDecoration(
+                                          enabledBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          focusedBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          filled: true,
+                                          fillColor: Color.fromARGB(
+                                              255, 255, 254, 253),
                                           focusColor: Color(0xFF800020),
                                           hintText: 'Password',
                                           suffixIcon:
                                               Icon(Icons.remove_red_eye),
                                           hintStyle: TextStyle(
-                                            color: Color(0xFF800020),
+                                            color: Color.fromARGB(
+                                                255, 173, 167, 169),
                                           )),
                                       onChanged: (value) {
                                         loginModel.password = value;
@@ -172,7 +201,7 @@ class _LoginPage extends State<LoginPage> {
                                                     .showSnackBar(
                                                   const SnackBar(
                                                       content:
-                                                          Text('Login Acount')),
+                                                          Text('Loging into Office...')),
                                                 );
 
                                                 login();
@@ -220,7 +249,7 @@ class _LoginPage extends State<LoginPage> {
                                     'Dont have an account',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      color: Colors.black54,
+                                      color: Color.fromARGB(225, 253, 253, 253),
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15,
                                     ),
@@ -230,7 +259,7 @@ class _LoginPage extends State<LoginPage> {
                                         'Sign Up',
                                         textAlign: TextAlign.start,
                                         style: TextStyle(
-                                            color: Color(0xFF004d99),
+                                            color: Color.fromARGB(255, 199, 45, 7),
                                             fontSize: 15),
                                       ),
                                       onPressed: signUP)

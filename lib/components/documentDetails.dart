@@ -141,11 +141,7 @@ class _DocumentUtil extends State<DocumentUtil> {
     String fileName = DateTime.now().millisecondsSinceEpoch.toString();
     File filee = File(path.join(documentDirectory.path, '$fileName.$exten'));
     filee.writeAsBytes(me.bodyBytes);
-    // var file = await new File.fromRawPath(me.bodyBytes);
-    // setState(() {
-    // image = me.bodyBytes;
-    // });
-    // ;
+   
     await OpenFile.open(filee.path);
   }
 
