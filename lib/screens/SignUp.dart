@@ -47,7 +47,7 @@ class _SignUpPage extends State<SignUpPage> {
   Widget playGame() {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xFF800020),
+        backgroundColor: Color.fromARGB(255, 5, 5, 5),
         body: ListView(
           children: [
             Container(
@@ -60,8 +60,8 @@ class _SignUpPage extends State<SignUpPage> {
                           const EdgeInsets.only(top: 80, left: 10, right: 10),
                       decoration: BoxDecoration(
                         gradient: LinearGradient(colors: [
-                          const Color(0xFFffffff),
-                          const Color(0xFFffffff),
+                          Color.fromARGB(255, 32, 32, 32),
+                          Color.fromARGB(255, 20, 20, 20),
                         ]),
                         borderRadius: BorderRadius.only(
                           topRight: Radius.circular(50),
@@ -77,7 +77,7 @@ class _SignUpPage extends State<SignUpPage> {
                                 'Create Account',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    color: Color(0xFF800020),
+                                    color: Color.fromARGB(255, 233, 230, 230),
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,
                                     fontFamily: 'Raleway'),
@@ -89,10 +89,26 @@ class _SignUpPage extends State<SignUpPage> {
                                   children: [
                                     TextFormField(
                                       decoration: InputDecoration(
+                                          enabledBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          focusedBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          filled: true,
+                                          fillColor: Color.fromARGB(
+                                              255, 250, 250, 250),
                                           focusColor: Color(0xFF800020),
                                           hintText: 'First Name',
                                           hintStyle: TextStyle(
-                                            color: Color(0xFF800020),
+                                            color: Color.fromARGB(
+                                                255, 241, 238, 239),
                                           )),
                                       onChanged: (value) {
                                         RegistrationModel.firstName = value;
@@ -109,10 +125,26 @@ class _SignUpPage extends State<SignUpPage> {
                                     ),
                                     TextFormField(
                                       decoration: InputDecoration(
+                                          enabledBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          focusedBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          filled: true,
+                                          fillColor: Color.fromARGB(
+                                              255, 250, 250, 250),
                                           focusColor: Color(0xFF800020),
                                           hintText: 'last Name',
                                           hintStyle: TextStyle(
-                                            color: Color(0xFF800020),
+                                            color: Color.fromARGB(
+                                                255, 238, 234, 235),
                                           )),
                                       onChanged: (value) {
                                         RegistrationModel.lastName = value;
@@ -129,10 +161,26 @@ class _SignUpPage extends State<SignUpPage> {
                                     ),
                                     TextFormField(
                                       decoration: InputDecoration(
+                                          enabledBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          focusedBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          filled: true,
+                                          fillColor: Color.fromARGB(
+                                              255, 250, 250, 250),
                                           focusColor: Color(0xFF800020),
                                           hintText: 'Telephone',
                                           hintStyle: TextStyle(
-                                            color: Color(0xFF800020),
+                                            color: Color.fromARGB(
+                                                255, 245, 241, 242),
                                           )),
                                       onChanged: (value) {
                                         RegistrationModel.mobile = value;
@@ -149,10 +197,26 @@ class _SignUpPage extends State<SignUpPage> {
                                     ),
                                     TextFormField(
                                       decoration: InputDecoration(
+                                          enabledBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          focusedBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          filled: true,
+                                          fillColor: Color.fromARGB(
+                                              255, 250, 250, 250),
                                           focusColor: Color(0xFF800020),
                                           hintText: 'Email',
                                           hintStyle: TextStyle(
-                                            color: Color(0xFF800020),
+                                            color: Color.fromARGB(
+                                                255, 240, 238, 238),
                                           )),
                                       onChanged: (value) {
                                         RegistrationModel.email = value;
@@ -170,12 +234,28 @@ class _SignUpPage extends State<SignUpPage> {
                                     TextFormField(
                                       obscureText: true,
                                       decoration: InputDecoration(
+                                          enabledBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          focusedBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20)),
+                                              borderSide: BorderSide(
+                                                  color: Color(0xFF8A3324),
+                                                  width: 2)),
+                                          filled: true,
+                                          fillColor: Color.fromARGB(
+                                              255, 250, 250, 250),
                                           focusColor: Color(0xFF800020),
                                           hintText: 'Password',
                                           suffixIcon:
                                               Icon(Icons.remove_red_eye),
                                           hintStyle: TextStyle(
-                                            color: Color(0xFF800020),
+                                            color: Color.fromARGB(
+                                                255, 241, 239, 239),
                                           )),
                                       onChanged: (value) {
                                         RegistrationModel.password = value;
@@ -230,12 +310,16 @@ class _SignUpPage extends State<SignUpPage> {
                                 children: [
                                   Text(
                                     "By signiny up you agree",
-                                    style: TextStyle(fontSize: 10),
+                                    style: TextStyle(
+                                        fontSize: 10, color: Colors.white),
                                   ),
+                                  SizedBox(width: 10,),
                                   Text(
                                     "Terms of service",
                                     style: TextStyle(
-                                        color: Color(0xFF004d99), fontSize: 15),
+                                        color:
+                                            Color.fromARGB(255, 197, 71, 21),
+                                        fontSize: 15),
                                   ),
                                 ],
                               ),
@@ -276,7 +360,7 @@ class _SignUpPage extends State<SignUpPage> {
                                     'already have an account',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      color: Colors.black54,
+                                      color: Color.fromARGB(136, 255, 255, 255),
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15,
                                     ),
@@ -286,7 +370,8 @@ class _SignUpPage extends State<SignUpPage> {
                                       'Login',
                                       textAlign: TextAlign.start,
                                       style: TextStyle(
-                                          color: Color(0xFF004d99),
+                                          color:
+                                              Color.fromARGB(255, 187, 53, 20),
                                           fontSize: 15),
                                     ),
                                     onPressed: myDashboard,

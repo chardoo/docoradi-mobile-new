@@ -66,8 +66,8 @@ class _LoginPage extends State<LoginPage> {
                           const EdgeInsets.only(top: 80, left: 10, right: 10),
                       decoration: BoxDecoration(
                         gradient: LinearGradient(colors: [
-                          const Color(0xFFffffff),
-                          const Color(0xFFffffff),
+                          Color.fromARGB(255, 29, 28, 28),
+                          Color.fromARGB(255, 15, 15, 15),
                         ]),
                         borderRadius: BorderRadius.only(
                           topRight: Radius.circular(50),
@@ -83,7 +83,7 @@ class _LoginPage extends State<LoginPage> {
                                 'Login ',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    color: Color(0xFF800020),
+                                    color: Color.fromARGB(255, 240, 238, 238),
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,
                                     fontFamily: 'Raleway'),
@@ -168,7 +168,7 @@ class _LoginPage extends State<LoginPage> {
                                         Text(
                                           "Forget Password",
                                           style: TextStyle(
-                                            color: Color(0xFF004d99),
+                                            color: Color.fromARGB(255, 246, 247, 248),
                                             fontSize: 15,
                                           ),
                                         ),
@@ -296,19 +296,13 @@ class _LoginPage extends State<LoginPage> {
   Future<dynamic> login() async {
     // debugPrint("login users hit");
     try {
-      ///flutter/login testing endpoint
-      ///advent_user/login prod_endpoint
       final response =
           await dio.post("/service/user/login", data: loginModel.toJson());
       if (response.statusCode == 200) {
-        // Map<String, dynamic> decoded = response.data;
-        // print(response.data['email']);
         SharedPreferences prefs = await SharedPreferences.getInstance();
         prefs.setBool('isLoggedIn', true);
         prefs.setString('userId', response.data['email']);
         prefs.setString('token', response.data['token']);
-        // prefs.setString('firsta', response.data['token']);
-
         myDashboard();
         // return decoded;
       } else {
