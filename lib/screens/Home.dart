@@ -179,17 +179,32 @@ class _Home extends State<Home> with AutomaticKeepAliveClientMixin<Home> {
           body: TabBarView(
             children: [
               Container(
-                child: loading
-                    ? const CircularProgressIndicator(
-                        color: Colors.white,
+                child: vieelead.recentsdoc.isEmpty
+                    ? Container(
+                        margin: EdgeInsets.only(left: 80, right: 40, top: 100),
+                        child: Text("No document found ",
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 221, 217, 217))),
                       )
                     : recentDocs(context, vieelead.recentsdoc),
               ),
               Container(
-                child: viewLaterList(context, vieelead.docs),
+                child: vieelead.docs.isEmpty
+                    ? Container(
+                        margin: EdgeInsets.only(left: 80, right: 40, top: 100),
+                        child: Text("No document to be viewed later ",
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 221, 217, 217))),
+                      )  :viewLaterList(context, vieelead.docs),
               ),
               Container(
-                child: personalUploads(context, personalDoc),
+                child:personalDoc.isEmpty
+                    ? Container(
+                        margin: EdgeInsets.only(left: 30, right: 40, top: 100),
+                        child: Text("No personal document available upload Now ",
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 221, 217, 217))),
+                      )  : personalUploads(context, personalDoc),
               )
             ],
           ),
@@ -625,13 +640,11 @@ class _Home extends State<Home> with AutomaticKeepAliveClientMixin<Home> {
                   style: theme.textTheme.caption,
                 ),
                 onTap: () {
-
-                Navigator.push(
+                  Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
                               PersonalDocumentUtil(documents[index])));
-                 
                 },
                 trailing: SizedBox(
                     width: 96,

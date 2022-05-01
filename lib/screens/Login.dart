@@ -45,18 +45,17 @@ class _LoginPage extends State<LoginPage> {
     return Scaffold(
       backgroundColor: const Color(0xFF800020),
       appBar: _getAppBar(),
-      body: playGame(),
+      body: mainPage(context),
     );
   }
 
-  Widget playGame() {
+  Widget mainPage(context) {
     return SafeArea(
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 15, 14, 15),
         body: ListView(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height - 35,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -83,7 +82,7 @@ class _LoginPage extends State<LoginPage> {
                                 'Login ',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    color: Color.fromARGB(255, 240, 238, 238),
+                                    color: Color.fromARGB(255, 163, 8, 8),
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,
                                     fontFamily: 'Raleway'),
@@ -94,7 +93,7 @@ class _LoginPage extends State<LoginPage> {
                                 child: Column(
                                   children: [
                                     TextFormField(
-                                       decoration: const InputDecoration(
+                                      decoration: const InputDecoration(
                                           enabledBorder: OutlineInputBorder(
                                               borderRadius: BorderRadius.all(
                                                   Radius.circular(20)),
@@ -127,7 +126,7 @@ class _LoginPage extends State<LoginPage> {
                                       height: 10,
                                     ),
                                     TextFormField(
-                                     obscureText: true,
+                                      obscureText: true,
                                       decoration: const InputDecoration(
                                           enabledBorder: OutlineInputBorder(
                                               borderRadius: BorderRadius.all(
@@ -168,7 +167,8 @@ class _LoginPage extends State<LoginPage> {
                                         Text(
                                           "Forget Password",
                                           style: TextStyle(
-                                            color: Color.fromARGB(255, 246, 247, 248),
+                                            color: Color.fromARGB(
+                                                255, 246, 247, 248),
                                             fontSize: 15,
                                           ),
                                         ),
@@ -200,8 +200,8 @@ class _LoginPage extends State<LoginPage> {
                                                 ScaffoldMessenger.of(context)
                                                     .showSnackBar(
                                                   const SnackBar(
-                                                      content:
-                                                          Text('Loging into Office...')),
+                                                      content: Text(
+                                                          'Loging into Office...')),
                                                 );
 
                                                 login();
@@ -259,7 +259,8 @@ class _LoginPage extends State<LoginPage> {
                                         'Sign Up',
                                         textAlign: TextAlign.start,
                                         style: TextStyle(
-                                            color: Color.fromARGB(255, 199, 45, 7),
+                                            color:
+                                                Color.fromARGB(255, 199, 45, 7),
                                             fontSize: 15),
                                       ),
                                       onPressed: signUP)

@@ -40,18 +40,17 @@ class _SignUpPage extends State<SignUpPage> {
     return Scaffold(
       backgroundColor: const Color(0xFF800020),
       appBar: _getAppBar(),
-      body: playGame(),
+      body: signUp(context),
     );
   }
 
-  Widget playGame() {
+  Widget signUp(context) {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color.fromARGB(255, 5, 5, 5),
         body: ListView(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height - 35,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -77,7 +76,7 @@ class _SignUpPage extends State<SignUpPage> {
                                 'Create Account',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    color: Color.fromARGB(255, 233, 230, 230),
+                                    color: Color.fromARGB(255, 180, 19, 19),
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,
                                     fontFamily: 'Raleway'),
@@ -313,12 +312,13 @@ class _SignUpPage extends State<SignUpPage> {
                                     style: TextStyle(
                                         fontSize: 10, color: Colors.white),
                                   ),
-                                  SizedBox(width: 10,),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
                                   Text(
                                     "Terms of service",
                                     style: TextStyle(
-                                        color:
-                                            Color.fromARGB(255, 197, 71, 21),
+                                        color: Color.fromARGB(255, 197, 71, 21),
                                         fontSize: 15),
                                   ),
                                 ],
