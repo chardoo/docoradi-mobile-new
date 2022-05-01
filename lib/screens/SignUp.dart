@@ -391,9 +391,18 @@ class _SignUpPage extends State<SignUpPage> {
 
   AppBar _getAppBar() {
     return AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 19, 18, 18),
         elevation: 0,
-        title: Center(child: Text('DocXon')));
+        title: Row(
+    children: [
+      Image.asset(
+        "assets/images/logo.jpeg",
+        fit: BoxFit.contain,
+        height: 50,
+        width: 50,
+      ),
+    ],
+  ));
   }
 
   myDashboard() {

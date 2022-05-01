@@ -279,11 +279,22 @@ class _LoginPage extends State<LoginPage> {
 
   AppBar _getAppBar() {
     return AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 17, 16, 16),
         elevation: 0,
-        title: Center(child: Text('DocXon')));
+        title: Row(
+    children: [
+      Image.asset(
+        "assets/images/logo.jpeg",
+        fit: BoxFit.contain,
+        height: 50,
+        width: 50,
+      ),
+    ],
+  ));
   }
 
+
+ 
   signUP() {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => SignUpPage()));
